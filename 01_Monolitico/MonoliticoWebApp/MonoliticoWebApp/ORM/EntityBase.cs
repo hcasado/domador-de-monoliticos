@@ -5,7 +5,7 @@ using System.Web;
 
 namespace MonoliticoWebApp.ORM
 {
-    public class EntityBase<T>
+    public class EntityBase
     {
         public virtual int Id { get; set; }
     }

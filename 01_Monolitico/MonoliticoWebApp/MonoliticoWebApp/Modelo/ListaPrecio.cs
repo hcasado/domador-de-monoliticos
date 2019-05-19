@@ -16,7 +16,7 @@ namespace MonoliticoWebApp.Modelo
             mapping.HasMany(x => x.Precios).Inverse().Cascade.AllDeleteOrphan();
         }
     }
-    public class ListaDePrecios : EntityBase<ListaDePrecios>
+    public class ListaDePrecios : EntityBase
     {
         public virtual string Nombre { get; set; }
         public virtual IList<Precio> Precios { get; set; }

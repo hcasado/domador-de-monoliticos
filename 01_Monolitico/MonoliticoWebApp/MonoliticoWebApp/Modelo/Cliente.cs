@@ -1,5 +1,6 @@
 ﻿using FluentNHibernate.Automapping;
 using FluentNHibernate.Automapping.Alterations;
+using MonoliticoWebApp.ORM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace MonoliticoWebApp.Modelo
         }
     }
 
-    public class Cliente
+    public class Cliente : EntityBase
     {
         public virtual string Cuit { get; set; }
         public virtual string Codigo { get; set; }

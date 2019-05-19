@@ -16,7 +16,7 @@ namespace MonoliticoWebApp.Modelo
         }
     }
 
-    public class Precio : EntityBase<Precio>
+    public class Precio : EntityBase
     {
         public virtual decimal Valor { get; set; }
         public virtual ListaDePrecios ListaDePrecios { get; set; }

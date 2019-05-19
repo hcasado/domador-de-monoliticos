@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 
@@ -9,9 +10,14 @@ namespace MonoliticoWebApp
     {
         public static void Initialize()
         {
-            var helper = new ORM.NHibernateHelper();
-            var cnn = new DB.SqlLocalDbHelper("MONOLITICO", "DATA").GetConnectionString();
-            //helper.UpdateDb(cnn);
+            var connectionString = ConfigurationManager.ConnectionStrings["monolitico"].ConnectionString;
+            var factory = ORM.NHibernateHelper.CreateSessionFactory(connectionString);
+            //ORM.NHibernateHelper.Export();
+
+        
+
+
+
         }
     }
 }

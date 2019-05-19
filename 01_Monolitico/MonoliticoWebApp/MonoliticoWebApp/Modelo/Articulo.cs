@@ -16,7 +16,7 @@ namespace MonoliticoWebApp.Modelo
         }
     }
 
-    public class Articulo : EntityBase<Articulo>
+    public class Articulo : EntityBase
     {
         public virtual string Codigo { get; set; }
         public virtual string Descripcion { get; set; }
